@@ -1,0 +1,9 @@
+<h2><%= @post.title %> by <%= @post.user.username %> </h2>
+<p><%= @post.content %></p>
+
+<h3>Subs</h3>
+<ul>
+    <li>
+        <a href="<%=sub_url(@post.sub_id)%>"><%= @post.sub.title %></a>
+    </li>
+</ul> 
