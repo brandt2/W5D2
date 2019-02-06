@@ -3,7 +3,7 @@
 
 <h3>Subs</h3>
 <ul>
-    <li>
-        <a href="<%=sub_url(@post.sub_id)%>"><%= @post.sub.title %></a>
-    </li>
+    <% @post.subs.each do |sub| %>
+    <li> <a href="<%=sub_url(sub)%>"><%= sub.title %></a></li>
+    <% end %>
 </ul> 

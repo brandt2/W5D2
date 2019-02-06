@@ -30,6 +30,7 @@
       <a href="<%=new_session_url%>">Sign In</a>
     <% end %>
    
+      <%= flash[:errors] if flash[:errors] %>
 
     <%= yield %>
   </body>

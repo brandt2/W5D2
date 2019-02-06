@@ -18,11 +18,14 @@
         Content:
         <textarea name="post[content]"></textarea>
     </label><br>
+  
+    <!-- <input type="hidden" name="post[sub_ids][]"> -->
 
    <% Sub.all.each do |sub| %>
-     <input type="checkbox" name="post[sub_id]"><%= sub.title %><br>
+     <input type="checkbox" name="post[sub_ids][]" value="<%=sub.id%>"><%= sub.title %><br>
    <% end %>
-   
+
+    
 
     <input type="submit" value="Make a post!">
 
