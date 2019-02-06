@@ -6,4 +6,13 @@
     <% @post.subs.each do |sub| %>
     <li> <a href="<%=sub_url(sub)%>"><%= sub.title %></a></li>
     <% end %>
-</ul> 
+</ul>
+
+<h4>Comments</h4>
+<a href="<%=new_post_comment_url(@post)%>">Comment on this post!</a>
+
+<ul>
+    <% @post.comments.each do |comment| %>
+        <li><%= comment.content %></li>
+    <% end %>
+</ul>

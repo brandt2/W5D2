@@ -19,6 +19,7 @@ class User < ApplicationRecord
 
     has_many :subs
     has_many :posts 
+    has_many :comments
 
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
